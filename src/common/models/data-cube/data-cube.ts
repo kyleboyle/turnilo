@@ -954,11 +954,12 @@ export class DataCube implements Instance<DataCubeValue, DataCubeJS> {
               measures = measures.append(newMeasure);
             });
           } else {
-            throw new Error(`unsupported type ${type} with nativeType ${nativeType}`);
+            // just skip unsupported aggregation types
+            //throw new Error(`unsupported type ${type} with nativeType ${nativeType}`);
           }
           break;
         default:
-          throw new Error(`unsupported type ${type}`);
+          //throw new Error(`unsupported type ${type}`);
       }
     }
 
